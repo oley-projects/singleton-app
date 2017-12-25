@@ -1,19 +1,3 @@
-class Logger
-  def initialize
-    @f = File.open 'log.txt', 'a'
-  end
+require './logger'
 
-  def self.say_something
-    puts "haha"
-  end
-
-  def log_something wat
-    @f.puts wat
-    #@f.close
-  end
-end
-
-Logger.say_something
-
-logger = Logger.new
-logger.log_something 'ha'
+Logger.instance.log_something 'auuu'
